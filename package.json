@@ -1,0 +1,38 @@
+{
+  "name": "cucumber-test",
+  "version": "1.0.0",
+  "description": "Based on cucumber-boilerplate v1.3.2",
+  "homepage": "https://github.com/webdriverio/cucumber-boilerplate",
+  "scripts": {
+    "test:local": "wdio wdio.local.conf.js",
+    "test:svt": "wdio wdio.svt.conf.js",
+    "test:browserstack": "wdio wdio.browserstack.conf.js",
+    "test:eyes": "wdio wdio.eyes.conf.js",
+    "test:eyesbrowserstack": "wdio wdio.eyesbrowserstack.conf.js",
+    "test:report": "junit-viewer --results=reports/junit/ --save=reports/test-results.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.nbnco.net.au/website-forms/cucumber-test.git"
+  },
+  "dependencies": {
+    "@applitools/eyes.webdriverio": "^1.1.0",
+    "babel-preset-es2015": "~6.24.0",
+    "babel-register": "~6.26.0",
+    "chai": "~4.1.2",
+    "fs-extra": "^6.0.1",
+    "junit-viewer": "^4.11.1",
+    "wdio-browserstack-service": "^0.1.16",
+    "wdio-cucumber-framework": "~1.1.0",
+    "wdio-junit-reporter": "^0.4.2",
+    "wdio-screenshot": "~0.6.0",
+    "wdio-selenium-standalone-service": "~0.0.9",
+    "wdio-spec-reporter": "~0.1.2",
+    "wdio-visual-regression-service": "^0.9.0",
+    "webdriverio": "4.12.0"
+  },
+  "devDependencies": {
+    "babel-polyfill": "~6.26.0"
+  },
+  "license": "UNLICENSED"
+}
