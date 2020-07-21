@@ -19,19 +19,6 @@ $ npm run test:svt
 svt can be replaced with other defined environments. This reads the configuration file `wdio.<ENVIRONMENT>.conf.js` which inherits from the base configuration `wdio.conf.js`.
 
 
-## Running behind nbn proxy
-
-All sorts of weirdness happens behind nbn proxy. Use these commands to set the proxy before running npm:
-
-```sh
-npm config set http_proxy http://proxy.nbnco.net.au:80
-npm config set proxy http://proxy.nbnco.net.au:80
-npm config set strict-ssl false
-export NODE_TLS_REJECT_UNAUTHORIZED=0
-```
-
-In `wdio.conf.js`, there is a proxy option `seleniumInstallArgs` which will need to be uncommented when Selenium downloads browser drivers for the first time. Otherwise you may get the error `A service failed in the 'onPrepare' hook`
-
 
 ## Feature files
 
@@ -194,12 +181,3 @@ Check out all predefined snippets. You can see how they get used in [`sampleSnip
 - `I select the (\d+)(st|nd|rd|th) option for element "([^"]*)?"` <br>Select a option based on it's index
 - `I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"` <br>Select a option based on it's name, value or visible text
 - `I move to element "([^"]*)?"( with an offset of (\d+),(\d+))` <br>Move the mouse by an (optional) offset of the specified element
-
-
-## Additional custom steps (nbn-custom.js)
-- `I set the "([^"]*)?" test address to the inputfield "([^"]*)?` <br/>Input a test address that is defined in test-addresses.json
-- `I resize screen to mobile` <br>Mobile screen width
-- `I resize screen to tablet` <br>Tablet screen width
-- `I resize screen to desktop` <br>Desktop screen width
-- `I save a screenshot of the viewport` <br>Saves a screenshot of the viewport
-- `I save a screenshot of the whole page` <br>Saves a full page screenshot
