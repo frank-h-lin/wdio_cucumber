@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.nbnco.net.au/website-forms/cucumber-test.git"
+    "url": "https://github.com/frank-h-lin/wdio_cucumber.git"
   },
   "dependencies": {
     "@applitools/eyes.webdriverio": "^1.1.0",
